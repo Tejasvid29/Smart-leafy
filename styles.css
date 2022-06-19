@@ -13,6 +13,7 @@ body{
 }
 a{
     text-decoration: none;
+    letter-spacing: 0.8px;
 }
 .Brand{
     font-size: 2rem;
@@ -29,6 +30,138 @@ a{
     font-size: 1.3rem;
     margin: 0 15px;
     font-family: 'Montserrat', sans-serif;
-    color: #F6FBF4;
+    color: #1363DF;
     font-weight: 300;
+}
+.nav-links:hover{
+    display: inline-block;
+    position: relative;
+}
+.nav-links:after {
+    content: '';
+    position: absolute;
+    background-color: #3AB0FF;
+    width: 2%;
+    transform: scaleX(0);
+    height: 2px; 
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .nav-links:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    width: 100%;
+  }
+  .big-heading{
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    padding: 5% 13%;
+    line-height: 2;
+    font-size: 2rem;
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 10px;
+  }
+  .card-g{
+    text-align: center;
+    padding: 10% 0;
+    background-color: #000;
+  }
+  .problems{
+    font-size: 2rem;
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    text-align: left;
+    margin-left: 170px;
+    letter-spacing: 1px ;
+  }
+  .card{
+    width: 300px;
+    height: 400px;
+    background: #000;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backface-visibility: hidden;
+    margin:  50px;
+  }
+.card:hover{
+    transform: scale(0.9);
+}
+.card:hover:after{
+    height: 280px;
+}
+.card:hover .card-text p{
+    margin-bottom: 0px;
+    opacity: 1;
+}
+.card:hover img{
+    transform: scale(1.25);
+}
+.card:after{
+    width: 100%;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 150px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    z-index: 20;
+    transition: all 0.25s ease;
+}
+.card img{
+    height: 100%;
+    z-index: 10;
+    transition: all 0.25s ease;
+}
+.card .card-text{
+    z-index: 30;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    padding: 20px;
+    padding-bottom: 30px;
+    letter-spacing: 1px;
+}
+.card .card-text p{
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.speech{
+    padding: 0% 15%;
+}
+.para1{
+    line-height: 2;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    font-size: 1.2rem;
+}
+.para2{
+    line-height: 2;
+    margin-bottom: 200px;
+    font-size: 1.2rem;
+}
+
+.gif1{
+    float: right;
+    border-radius: 18px;
+    margin-left: 30px;
+}
+.gif2{
+    float: left;
+    border-radius: 18px;
+    margin-right: 30px;
+    height: 250px;
 }
